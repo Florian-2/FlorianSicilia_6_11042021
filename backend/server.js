@@ -1,4 +1,4 @@
-const http = require('http'); // Importation du module "http" et express qui se trouve dans le fichier "app.js" qui est dans le meme dossier
+const http = require('http');
 const app = require('./app');
 
 const normalizePort = val => 
