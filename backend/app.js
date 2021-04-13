@@ -9,10 +9,12 @@ const app = express();
 
 // Connexion à la base de données
 mongoose.connect('mongodb+srv://Florian:iqw1Gfw3dM5qlePN@cluster0.miyju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(() => console.log('Connexion à MongoDB échouée !'));
+{ 
+  	useNewUrlParser: true,
+    useUnifiedTopology: true 
+})
+.then(() => console.log('Connexion à MongoDB réussie !'))
+.catch(() => console.log('Connexion à MongoDB échouée !'));
 
 // CORS
 app.use((req, res, next) => 
@@ -27,11 +29,6 @@ app.use((req, res, next) =>
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-app.post('/api/auth', userRoute);
-
-app.use((req, res) =>
-{
-    res.json({message: "Réponse du serveur"});
-});
+app.use('/api/auth', userRoute);
 
 module.exports = app;
