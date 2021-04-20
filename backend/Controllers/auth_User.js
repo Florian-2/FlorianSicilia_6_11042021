@@ -39,7 +39,7 @@ exports.login = (req, res, next) =>
                         userId: user._id, 
                         token: token.sign( 
                             { userId: user._id },
-                            'TOKEN_TEMPORAIRE',
+                            process.env.JWT_TOKEN,
                             { expiresIn: '24h' }
                         )
                     });
