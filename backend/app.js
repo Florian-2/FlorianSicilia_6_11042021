@@ -17,7 +17,7 @@ const app = express();
 */
 
 // Connexion à la base de données
-mongoose.connect('mongodb+srv://Florian:iqw1Gfw3dM5qlePN@cluster0.miyju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect(`mongodb+srv://Florian:iqw1Gfw3dM5qlePN@cluster0.miyju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
 { 
   	useNewUrlParser: true,
     useUnifiedTopology: true 

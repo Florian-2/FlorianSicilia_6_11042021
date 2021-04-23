@@ -2,6 +2,11 @@ const User = require('../Models/user');
 const token = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
+const handleErrors = (err) =>
+{
+    console.log(err.message, err.code);
+};
+
 // Créé un compte
 exports.signup = (req, res, next) => 
 {
@@ -34,7 +39,7 @@ exports.signup = (req, res, next) =>
 
             user.save()
                 .then(() => res.status(201).json({ message: "Created account" }))
-                .catch(error => res.status(400).json({ error }));
+                .catch(error => res.status(400).json( handleErrors(error) ));
 
         }).catch(error => res.status(500).json({ error }));
 };
