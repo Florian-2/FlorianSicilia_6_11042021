@@ -7,12 +7,13 @@ const userSchema = mongoose.Schema({
         type: String, 
         required: true, 
         unique: true,
-        validate: [isEmail, "Enter a valid email address"],
+        trim: true,
+        lowercase: true,
+        validate: [isEmail, "Invalid Email"]
     },
     password: {
         type: String, 
-        required: true, 
-        match: [/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, "The password must contain at least 8 characters including an uppercase, a lowercase, a number and a special character"]
+        required: true,
     }
 });
 
