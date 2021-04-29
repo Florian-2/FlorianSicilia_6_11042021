@@ -11,7 +11,7 @@ const createSauceRoute = require('./Routes/sauces');
 const app = express();
 
 // Connexion à la base de données
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS}@cluster0.miyju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS}@${process.env.DB_ACCES}`,
 { 
   	useNewUrlParser: true,
     useUnifiedTopology: true 
