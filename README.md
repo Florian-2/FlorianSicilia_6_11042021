@@ -37,4 +37,4 @@ __1.__ Rendez-vous dans le dossier __frontend__ puis exécuter cette commande `n
 __2.__ Rendez-vous dans le dossier __backend__ puis exécuter cette commande `nodemon server` dans un terminal.
 
 __3.__ Ensuite rendez-vous à cette [adresse](http://localhost:4200/ "Redirection vers le fichier .env.example"), 
-ou tapper directement `http://localhost:4200/` dans la bar d'adresse de votre navigateur. !
+ou tapper directement `http://localhost:4200/` dans la bar d'adresse de votre navigateur.
