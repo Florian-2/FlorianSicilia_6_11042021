@@ -150,42 +150,5 @@ exports.sauceLikeOrDislike = (req, res, next) =>
     
         default:
         break;
-}
-
-    /*
-    if (like === 1) 
-    {
-        Sauces.updateOne({ _id: req.params.id }, {$push: { usersLiked: user }, $inc: { likes: 1 }})
-            .then(() => res.status(200).json({ message: 'Like ajouté !' }))
-            .catch((error) => res.status(400).json({ error }))
-    }
-    // Dislike
-    if (like === -1) 
-    {
-        Sauces.updateOne( { _id: req.params.id }, {$push: { usersDisliked: user }, $inc: { dislikes: 1 }})
-            .then(() => { res.status(200).json({ message: 'Dislike ajouté !' })})
-            .catch((error) => res.status(400).json({ error }))
-    }
-
-    // Annuler un Like ou un Dislike
-    if (like === 0) 
-    { 
-        Sauces.findOne({ _id: req.params.id })
-            .then((sauce) => 
-            {
-                if (sauce.usersLiked.includes(user)) 
-                {
-                    Sauces.updateOne({ _id: req.params.id }, { $pull: { usersLiked: user }, $inc: { likes: -1 }})
-                        .then(() => res.status(200).json({ message: 'Like annuler' }))
-                        .catch((error) => res.status(400).json({ error }))
-                }
-                if (sauce.usersDisliked.includes(user)) 
-                {
-                    Sauces.updateOne({ _id: req.params.id }, { $pull: { usersDisliked: user }, $inc: { dislikes: -1 }})
-                        .then(() => res.status(200).json({ message: 'Dislike annuler' }))
-                        .catch((error) => res.status(400).json({ error }))
-                }
-            }).catch((error) => res.status(404).json({ error }))
-    }*/
+    }      
 };
-
